@@ -12,14 +12,15 @@ const Navbar = () => {
 
   useEffect(() => {
     setActivelink(router.asPath);
+    console.log(router);
   }, [router.asPath]);
 
   const links = [
-    { a: '/', link: 'home' },
-    { a: '/about', link: 'about' },
-    { a: '/contact', link: 'contact' },
-    { a: '/webdev', link: 'webdev' },
-    { a: '/graphics', link: 'graphics' },
+    { a: '/', name: 'home' },
+    { a: '/about', name: 'about' },
+    { a: '/contact', name: 'contact' },
+    { a: '/webdev', name: 'webdev' },
+    { a: '/graphics', name: 'graphics' },
   ];
 
   return (
@@ -33,7 +34,7 @@ const Navbar = () => {
             key={idx}
           >
             <Link href={link.a}>
-              <a>{link.link.toUpperCase()}</a>
+              <a>{link.name.toUpperCase()}</a>
             </Link>
           </li>
         ))}
