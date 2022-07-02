@@ -8,4 +8,4 @@
 6. custom `_document`
 7. simple flex Layout (nav,main,footer template)
 8. custom `jsconfig` for easy `import`
-9. available `active link` in navbar
+9. styled `active link` in navigation
