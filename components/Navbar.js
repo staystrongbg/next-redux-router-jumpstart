@@ -30,7 +30,7 @@ const Navbar = () => {
             className={`${
               activelink === link.a ? styles.active : styles['not-active']
             }`}
-            key={link.idx}
+            key={idx}
           >
             <Link href={link.a}>
               <a>{link.link.toUpperCase()}</a>
