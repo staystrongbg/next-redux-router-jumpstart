@@ -1,6 +1,14 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  reactStrictMode: true,
-}
+  env: {},
+  /*
+  ***to use next/Image in SSG 
+  images: {
+    disableStaticImages: false,
+    loader: 'custom',
+  *** refresh dynamic pages
+  trailingSlash: true,
+  },*/
+};
 
-module.exports = nextConfig
+module.exports = nextConfig;
