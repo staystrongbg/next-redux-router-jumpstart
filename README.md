@@ -1,6 +1,6 @@
 ### Description
 
-1. redux
+1. redux store is set
 2. just add props `title`, `keywords` or `description` in Layout component for each page created
 3. optimized for SSG Build with no image optimization (custom image loader instead of next/Image)
 4. refresh dynamic pages problem solved.
