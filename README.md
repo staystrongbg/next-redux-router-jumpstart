@@ -11,3 +11,4 @@
 9. custom `jsconfig` for easy `import`
 10. styled `active link` in navigation
 11. env supported by default inside `next.config.js` just start typing and dont forget to restart devserver:)
+12. api handler is also included by default
