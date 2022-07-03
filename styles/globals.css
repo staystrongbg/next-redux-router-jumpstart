@@ -16,4 +16,6 @@ a {
 }
 h1 {
   font-size: 6rem;
+  /* font-family: 'Lato'; */
+  font-weight: 100;
 }

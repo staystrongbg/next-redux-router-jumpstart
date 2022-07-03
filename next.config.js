@@ -3,6 +3,14 @@ const nextConfig = {
   env: {
     URL: 'http://localhost:3000/api',
   },
+  webpack(config) {
+    config.module.rules.push({
+      test: /\.svg$/,
+      use: ['@svgr/webpack'],
+    });
+
+    return config;
+  },
   /*
   ***to use next/Image in SSG 
   images: {

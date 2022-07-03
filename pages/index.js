@@ -7,7 +7,9 @@ export default function Home() {
   return (
     <Layout title='Home'>
       <h1>Homepage</h1>
-      <p>Welcome | This is our homepage</p>
+      <p>
+        <b>Welcome</b> | This is our homepage
+      </p>
     </Layout>
   );
 }

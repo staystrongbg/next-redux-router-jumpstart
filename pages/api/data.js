@@ -5,6 +5,7 @@ const data = [
   { page: 'webdev', text: 'This is webdev page', id: 3 },
   { page: 'graphics', text: 'this is graphic page', id: 4 },
   { page: 'custom', text: 'this is custom page', id: 5 },
+  { page: 'example-10', text: 'this is example10 page', id: 6 },
 ];
 
 // export default data;

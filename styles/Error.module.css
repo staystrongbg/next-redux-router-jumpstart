@@ -1,0 +1,9 @@
+.error {
+  background-color: rgba(0, 0, 0, 0.87);
+  text-align: center;
+  padding: 20px 40px;
+  border-radius: 20px;
+}
+.error p {
+  color: beige;
+}

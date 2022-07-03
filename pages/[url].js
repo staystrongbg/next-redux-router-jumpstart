@@ -1,3 +1,4 @@
+import Error from '@/components/Error';
 import Layout from '@/components/Layout';
 import useFetch from '@/lib/useFetch';
 import PacmanLoader from 'react-spinners/PacmanLoader';
@@ -14,14 +15,14 @@ const RequestedPage = () => {
   }
   if (loading) {
     return (
-      <Layout>
+      <Layout title='Loading...'>
         <PacmanLoader />
       </Layout>
     );
   }
   return (
-    <Layout>
-      <p>{isError}</p>
+    <Layout title='404 page not found'>
+      <Error error={isError} />
     </Layout>
   );
 };
