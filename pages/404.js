@@ -5,7 +5,18 @@ const Error = () => {
   return (
     <Layout title='Error 404'>
       <h1>No such page. </h1>
-      <Link href='/'>go back</Link>
+      <Link href='/'>
+        <a
+          style={{
+            backgroundColor: 'black',
+            color: 'beige',
+            padding: '5px 10px',
+            borderRadius: '4px',
+          }}
+        >
+          go back
+        </a>
+      </Link>
     </Layout>
   );
 };
