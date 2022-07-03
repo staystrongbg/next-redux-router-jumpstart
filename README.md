@@ -10,3 +10,4 @@
 7. custom image loader | if building SSG `import Image from '@/lib/Image` instead next/Image
 8. custom `useFetch` hook 
 9. custom `loading`, `error` handling 
+10. ...
