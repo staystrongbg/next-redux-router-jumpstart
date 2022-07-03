@@ -12,7 +12,6 @@ const Navbar = () => {
 
   useEffect(() => {
     setActivelink(router.asPath);
-    console.log(router);
   }, [router.asPath]);
 
   const links = [

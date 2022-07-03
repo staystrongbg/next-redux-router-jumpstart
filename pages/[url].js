@@ -1,11 +1,27 @@
-import { useRouter } from 'next/router';
 import Layout from '@/components/Layout';
+import useFetch from '@/lib/useFetch';
+import PacmanLoader from 'react-spinners/PacmanLoader';
 const RequestedPage = () => {
-  const router = useRouter();
-  const page = router.query.url;
+  const { data, page, loading, isError } = useFetch(process.env.URL);
+
+  if (data && data[0]) {
+    return (
+      <Layout title={page}>
+        <h1>{data[0].page}</h1>
+        <p>{data[0].text}</p>
+      </Layout>
+    );
+  }
+  if (loading) {
+    return (
+      <Layout>
+        <PacmanLoader />
+      </Layout>
+    );
+  }
   return (
-    <Layout title={page}>
-      <h1>{page}</h1>
+    <Layout>
+      <p>{isError}</p>
     </Layout>
   );
 };
