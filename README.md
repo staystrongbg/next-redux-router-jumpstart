@@ -1,6 +1,6 @@
 # Nextjs jumpstart template
 
-## fetures added
+## Fetures added
 1. `redux` rdy
 2. Simple site Layout (nav,main,footer) *page title,desc,keywords can be added as props*
 3. custom `404` page
