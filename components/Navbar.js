@@ -1,27 +1,12 @@
 import Link from 'next/link';
 import styles from '@/styles/Navbar.module.css';
-import { useEffect, useState } from 'react';
-import { useRouter } from 'next/router';
+import useNav from '@/lib/useNav';
 const STYLES_NAV = { width: '100%' };
 const Navigation = ({ children, s }) => {
   return <nav style={{ ...STYLES_NAV, ...s }}>{children}</nav>;
 };
 const Navbar = () => {
-  const router = useRouter();
-  const [activelink, setActivelink] = useState('');
-
-  useEffect(() => {
-    setActivelink(router.asPath);
-  }, [router.asPath]);
-
-  const links = [
-    { a: '/', name: 'home' },
-    { a: '/about', name: 'about' },
-    { a: '/contact', name: 'contact' },
-    { a: '/webdev', name: 'webdev' },
-    { a: '/graphics', name: 'graphics' },
-  ];
-
+  const { activelink, links } = useNav();
   return (
     <Navigation>
       <ul className={styles.navbar}>
