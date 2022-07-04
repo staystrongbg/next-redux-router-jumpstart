@@ -1,7 +1,7 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   env: {
-    URL: 'http://localhost:3000/ap',
+    URL: 'http://localhost:3000/api',
   },
   webpack(config) {
     config.module.rules.push({

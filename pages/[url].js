@@ -2,6 +2,7 @@ import Error from '@/components/Error';
 import Layout from '@/components/Layout';
 import useFetch from '@/lib/useFetch';
 import PacmanLoader from 'react-spinners/PacmanLoader';
+import { Skeleton } from '@mui/material';
 const RequestedPage = () => {
   const { data, page, loading, isError } = useFetch(process.env.URL);
 
@@ -16,7 +17,16 @@ const RequestedPage = () => {
   if (loading) {
     return (
       <Layout title='Loading...'>
-        <PacmanLoader />
+        <Skeleton
+          sx={{ bgcolor: '#ccff90', opacity: '0.1' }}
+          width={500}
+          height={200}
+        />
+        <Skeleton
+          sx={{ bgcolor: '#ccff90', opacity: '0.1' }}
+          width={310}
+          height={50}
+        />
       </Layout>
     );
   }

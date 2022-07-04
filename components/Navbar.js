@@ -1,19 +1,29 @@
 import Link from 'next/link';
 import styles from '@/styles/Navbar.module.css';
-import useNav from '@/lib/useNav';
+import useActiveLink from '@/lib/useActiveLink';
 import { Navigation } from '@/lib/styledComponents';
-import { useState } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 
 const Navbar = () => {
   const fsNavigation = useSelector((state) => state.fsNavigation);
   const dispatch = useDispatch();
-  const { activelink, links } = useNav();
-  // const [showNavigation, setShowNavigation] = useState(false);
+
+  const { activelink } = useActiveLink();
+
+  const links = [
+    { a: '/', name: 'home' },
+    { a: '/about', name: 'about' },
+    { a: '/contact', name: 'contact' },
+    { a: '/webdev', name: 'webdev' },
+    { a: '/graphics', name: 'graphics' },
+    { a: '/custom', name: 'custom' },
+    { a: '/example-10', name: 'example10' },
+  ];
   return (
     <Navigation>
       <span
         className={styles.menu}
+        title='Navigation'
         onClick={() =>
           dispatch({ type: 'FS_NAVIGATION', payload: !fsNavigation })
         }
